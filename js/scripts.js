@@ -155,3 +155,43 @@ buttons.forEach((btn) => {
 
   });
 });
+
+//DARK-MODE
+
+function changeMode(){
+  changeClasses() 
+  changeText()
+}
+
+function changeClasses(){
+button.classList.toggle(darkModeClass)
+h3.classList.toggle(darkModeClass)
+fundo.classList.toggle(darkModeClass)
+body.classList.toggle(darkModeClass)
+botaoigual.classList.toggle(darkModeClass)
+botaoIgual.classList.toggle(darkModeClass)
+
+
+}
+
+function changeText(){
+   const lightMode = 'Light Mode'
+   const darkMode = 'Dark Mode'
+
+   if(button.classList.contains(darkModeClass)){
+           button.innerHTML = lightMode
+           return
+   }
+   button.innerHTML = darkMode 
+}
+
+const darkModeClass = 'dark-mode'
+const button = document.getElementById('mode-selector')
+const h3 = document.getElementsByTagName('h3')[0]
+const body = document.getElementsByTagName('body')[0]
+const fundo = document.getElementById('calc');
+
+
+
+
+button.addEventListener('click', changeMode)

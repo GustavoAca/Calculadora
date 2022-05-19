@@ -5,13 +5,55 @@
   font-family: helvetica;
 }
 
+
+
+
 body {
-  background-color: #333;
+  background-color: rgb(255, 255, 255);
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 3em;
+  transition: all 1.5s linear;
 }
+body.dark-mode {
+  background-color: #333;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*Dark botao*/
+ nav button{
+	border-radius: 40px;
+	font-size: 1rem;
+	height: 60px;
+	width: 8em;
+	border: none;
+	background-color: #4e545c;
+	color: #e5e8e8;
+	transition: all 0.5s linear;
+}
+
+nav button:hover {
+	background-color: #000401;
+}
+
+nav button.dark-mode {
+	background-color: #e5e8e8;
+	color: #4e545c;
+}
+
+button.dark-mode:hover {
+	background-color: #4e545c;
+	color: #e5e8e8;
+}
+
+/* DARK MODE*/
 
 #calc {
   width: 400px;
@@ -22,10 +64,19 @@ body {
   flex-direction: column;
 }
 
+#calc.dark-mode{
+  background-color: #000401;
+  color: #e5e8e8;
+}
+
 #calc h3 {
   font-size: .8em;
   font-weight: 300;
   color: #666;
+}
+
+ #calc h3.dark-mode{
+  color:#e5e8e8;
 }
 
 #operations {
@@ -43,6 +94,7 @@ body {
 #previous-operation {
   color: #777;
 }
+
 
 #current-operation {
   font-size: 3em;
@@ -64,6 +116,16 @@ body {
   cursor: pointer;
 }
 
+#buttons-container button.dark-mode
+{
+  background-color: #535151;
+}
+ #buttons-container button.dark-mode{
+  background-color: #000401;
+  color: #dbdbdb;
+  transition: all 0.5s linear;
+}
+
 #buttons-container .number {
   background-color: #f3f3f3;
 }
@@ -73,6 +135,10 @@ body {
   border-color: #999;
 }
 
+.number.dark-mode {
+  background-color: #f3f3f3;
+}
+
 #buttons-container #equal-btn {
   grid-column: span 2;
   background-color: #75a5cb;
@@ -80,4 +146,8 @@ body {
 
 #buttons-container #equal-btn:hover {
   background-color: #3a91d8;
+}
+
+#buttons-container #equal-btn.dark-mode {
+  background-color: #e0e3e6;
 }
