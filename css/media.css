@@ -1,0 +1,6 @@
+@media screen and (max-width: 760px){
+  nav button {
+    height: 35px;
+    width: 4em;
+  }
+}
