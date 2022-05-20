@@ -1,4 +1,11 @@
 @media screen and (max-width: 760px){
+  header{
+    flex-direction: column;
+  }
+  main{
+    flex-direction: column;
+  }
+
   nav button {
     height: 35px;
     width: 4em;

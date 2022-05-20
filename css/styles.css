@@ -20,13 +20,9 @@ body.dark-mode {
   background-color: #333;
 }
 
-header {
-  flex-direction: row;
-  justify-content: space-between;
+main {
   align-items: center;
-  position: relative;
-  justify-content: center;
-
+  display: flex;
 }
 
 /*Dark botao*/
@@ -39,6 +35,8 @@ header {
 	background-color: #4e545c;
 	color: #e5e8e8;
 	transition: all 0.5s linear;
+  margin-bottom: 10px;
+  
 }
 
 nav button:hover {
